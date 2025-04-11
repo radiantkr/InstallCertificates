@@ -23,6 +23,7 @@ java --source 11 InstallCert.java <args>
 
 ```
 java InstallCert [--proxy=proxyHost:proxyPort] <host>[:port] [passphrase]
+e.g.: java InstallCert <TokenHost>:<Port>![image](https://github.com/user-attachments/assets/33442d06-f3a1-4614-84d5-c7fe595d3968)
 ```
 
 
@@ -30,6 +31,7 @@ java InstallCert [--proxy=proxyHost:proxyPort] <host>[:port] [passphrase]
 
 ```
 keytool -exportcert -alias [host]-1 -keystore jssecacerts -storepass changeit -file [host].cer
+e.g.: keytool -exportcert -alias <Alias_Name> -keystore jssecacerts -storepass changeit -file <Certificate Path>
 ```
 
 
@@ -37,6 +39,7 @@ keytool -exportcert -alias [host]-1 -keystore jssecacerts -storepass changeit -f
 
 ```
 sudo keytool -importcert -alias [host] -keystore [path to system cacerts] -storepass changeit -file [host].cer
+e.g.:sudo keytool -importcert -alias <Alias_Name> -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit -file <Certificate Path>
 ```
 
 Hint: `keystore` system cacerts path should be located in `$JAVA_HOME/lib/security/cacerts` if your `$JAVA_HOME` env var is set.
@@ -45,6 +48,7 @@ Hint: `keystore` system cacerts path should be located in `$JAVA_HOME/lib/securi
 
 ```
 sudo keytool -importcert -alias [host] -cacerts -storepass changeit -file [host].cer
+e.g.: 
 ```
 
 
