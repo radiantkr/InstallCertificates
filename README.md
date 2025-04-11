@@ -10,7 +10,11 @@ javac InstallCertificateToKeystore.java
 >**Note** since Java 11, you can run it directly without compiling it first:
 
 ```
+For Java 11:
 java --source 11 InstallCertificateToKeystore.java <args>
+
+If JAVA_HOME environment is set:
+java InstallCertificateToKeystore.java <args>
 ```
 
 
