@@ -41,7 +41,3 @@ Hint: `keystore` system cacerts path should be located in `$JAVA_HOME/lib/securi
 
 >**Note** since Java 11, you can use the `-cacerts` flag instead of `-keystore [cacerts path]`
 
-```
-sudo keytool -importcert -alias [host] -cacerts -storepass changeit -file [host].cer
-e.g.: 
-```
