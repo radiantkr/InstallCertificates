@@ -11,7 +11,7 @@ import java.security.cert.X509Certificate;
  * Usage:
  *   java InstallCert [--proxy=host:port] host[:port] [passphrase] [--quiet]
  */
-public class InstallCertUpdated {
+public class InstallCertificateToKeystore {
 
     public static void main(String[] args) throws Exception {
         String host = null;
